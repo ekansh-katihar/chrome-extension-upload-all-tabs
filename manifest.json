@@ -1,0 +1,22 @@
+{
+  "name": "Access DOM",
+  "description": "An extension which can access DOM",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "commands": {
+    "upload": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+2",
+        "mac": "Command+Shift+2"
+      },
+      "description": "Duplicates the currently active tab because... why not?"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting","tabs"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
