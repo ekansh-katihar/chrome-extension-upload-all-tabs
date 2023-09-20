@@ -14,11 +14,13 @@ changeColor.addEventListener("click", async () => {
       chrome.scripting.executeScript({
         target: { tabId: tab.id },
         function: () => {
+
           const bodyText = document.body.innerText.toLowerCase();
-          var title = document.getElementsByTagName('title')[0].text.replace(/ /g, "_")
+          var fileName = document.getElementsByTagName('title')[0].text.replace(/ /g, "_")
+          var title = window.location.pathname
           var htmlElement = document.getElementsByTagName('html')[0]; // Assuming you want the first <html> element
           var htmlString = htmlElement.outerHTML;
-          var url = 'https://vcq34knn47nwz77dnexcztoi6i0achue.lambda-url.us-east-2.on.aws/?title='+title;
+          var url = 'https://vcq34knn47nwz77dnexcztoi6i0achue.lambda-url.us-east-2.on.aws/?title=' + title+'/'+fileName+'.html';
           // Create a new XMLHttpRequest object
           var xhr = new XMLHttpRequest();
 
