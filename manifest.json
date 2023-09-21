@@ -1,6 +1,6 @@
 {
-  "name": "Access DOM",
-  "description": "An extension which can access DOM",
+  "name": "Upload Tabs to S3 ",
+  "description": "Ever need to save all the tabs for your later use because you web subscription is ending. This will read all the tabs and upload it to S3.",
   "version": "1.0.0",
   "manifest_version": 3,
   "commands": {
@@ -9,7 +9,7 @@
         "default": "Ctrl+Shift+2",
         "mac": "Command+Shift+2"
       },
-      "description": "Duplicates the currently active tab because... why not?"
+      "description": "Upload Tabs to S3"
     }
   },
   "background": {
